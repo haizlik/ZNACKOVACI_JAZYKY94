@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html lang="cs">
+    <head>
+        <title>Dokumentace - semestrální práce - ČZU PEF INFO - Značkovací jazyky</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        
+        <header>
+            <nav>
+				<div>
+					Odkaz na projekt:
+					<a href="ODKAZ">GitHub projekt</a>
+				</div>
+            </nav>
+        </header>
+        
+         <main>
+            <article>
+                <header>
+                    <h1>Dokumentace</h1>
+                    <nav>
+                        <ul>
+                            <li><a href="#uvod">Úvod</a></li>
+                            <li><a href="#metodika">Metodika</a></li>
+                            <li><a href="#popis-el">Popis elementů</a></li>
+                            <li><a href="#popis-at">Popis atributů</a></li>
+                            <li><a href="#popis-tr">Popis transformace</a></li>
+                            <li><a href="#zaver">Závěr</a></li>
+                        </ul>
+                    </nav>
+                </header>
+				<br>
+                <section>
+                    <h2 id="uvod">Úvod</h2>
+                    <p>Vytvořený XML soubor je součástí semestrálního projektu k předmětu Značkovací jazyky ve 2. ročníku PEF na ČZU oboru INFO. Tento soubor slouží k nastavení přehrávače filmů. Nastavení je volně inspirováno překrávačem KODI pro Raspberry Pi2 (Open ELEC).</p>
+                </section>
+				<br>
+                <section>
+                    <h2 id="metodika">Metodika</h2>
+                    <p>Programy a pomůcky pro vytvoření tohoto projektu:</p>
+					<ul>
+						<li>NetBeans IDE 8.2 - použit na psaní HTML, XML, XSD, XSL souborů a pro provedení transformace</li>
+						<li>http://www.utilities-online.info/xsdvalidation/#.WPFZN9KLSUk - webová stránka pro porovnání správnosti XML a XSD souborů</li>
+						<li>https://www.w3schools.com - informace z těchto webových stránek pomohli při řešení problémů</li>
+						<li>https://validator.w3.org/nu/#textarea - validátor pro ověření HTML5</li>
+					</ul>
+                </section>
+				<br>
+                <section>
+                    <h2 id="popis-el">Popis elementů</h2>
+                    <p>V této části jsou vypsané a popsané jednotlivé elementy a jaké hodnoty mohou nabývat.</p>
+					<table>
+                        <tr>
+                            <th>Element</th>
+                            <th>Popis</th>
+                            <th>Hodnoty</th>
+                        </tr>
+                        <tr>
+                            <td>config</td>
+                            <td>Hlavní element, veškeré ostatní jsou vnořeny do tohoto.</td>
+                            <td>Nenabývá žádných hodnot</td>
+                        </tr>
+                        <tr>
+                            <td>configSys</td>
+                            <td>Element, který určuje, že všechny elementy uvnitř udávají systémová nastavení.</td>
+                            <td>Nenabývá žádných hodnot</td>
+                        </tr>
+						<tr>
+                            <td>video</td>
+                            <td>Element pro nastavení obrazu.</td>
+                            <td>Nenabývá žádných hodnot</td>
+                        </tr>
+						<tr>
+                            <td>rozliseni</td>
+                            <td>Element určující rozliseni obrazovky</td>
+                            <td>144p; 240p; 480p; 720p; 1080p; 1440p; 2160p; 4320p</td>
+                        </tr>
+						<tr>
+                            <td>frekvence</td>
+                            <td>Element určující s jakou frekvencí se bude obraz obnovovat</td>
+                            <td>25 - 60</td>
+                        </tr>
+						
+						<tr>
+                            <td>pomerStran</td>
+                            <td>Element určující poměr stran.</td>
+                            <td>5:4; 4:3; 16:9; 16:10</td>
+                        </tr>
+						<tr>
+                            <td>priblizeni</td>
+                            <td>Element určující velikost zobrazení na obrazovce</td>
+                            <td>1; 2; 4; 8</td>
+                        </tr>
+						<tr>
+                            <td>zpozdeni</td>
+                            <td>Element určující zpozdeni zobrazení obrazu</td>
+                            <td>0 - 10</td>
+                        </tr>
+						<tr>
+                            <td>omezeni</td>
+                            <td>Element určující omezení</td>
+                            <td>Zapnuto/Vypnuto</td>
+                        </tr>
+						<tr>
+                            <td>_3d</td>
+                            <td>Element určující zobrazení obrazu ve 3D</td>
+                            <td>Zapnuto/Vypnuto</td>
+                        </tr>
+						<tr>
+                            <td>audio</td>
+                            <td>Element pro nastavení zvuku</td>
+                            <td>Nenabývá žádných hodnot</td>
+                        </tr>
+						<tr>
+                            <td>vystup</td>
+                            <td>Element určující výstupní zařízení</td>
+                            <td>zadny; HDMI1 až HDMI3; Bluetooth</td>
+                        </tr>
+						<tr>
+                            <td>kanaly</td>
+                            <td>Element určující počet reproduktorů/kanálů</td>
+                            <td>2.0; 3.0; 5.1; 6.1; 7.1</td>
+                        </tr>
+						<tr>
+                            <td>volume</td>
+                            <td>Element určující hlasitost</td>
+                            <td>0 - 100</td>
+                        </tr>
+						<tr>
+                            <td>mute</td>
+                            <td>Element určující zapnutí nebo vypnutí zvuku</td>
+                            <td>Zapnuto; Vypnuto</td>
+                        </tr>
+						<tr>
+                            <td>GUI</td>
+                            <td>Element určující zvuky kláves při pohybu v menu</td>
+                            <td>Zapnuto; Vypnuto</td>
+                        </tr>
+						<tr>
+                            <td>zvuky</td>
+                            <td>Element umožňující nastavení vlastních systémových zvuků</td>
+                            <td>zakladni; upravene 1 až upravene 3; worms</td>
+                        </tr>
+						<tr>
+                            <td>input</td>
+                            <td>Element umožňující nastavit vstupní zařízení</td>
+                            <td>Nenabývá žádných hodnot</td>
+                        </tr>
+						<tr>
+                            <td>mys</td>
+                            <td>Element umožňující zapnutí/vypnutí myši</td>
+                            <td>Zapnuto; Vypnuto</td>
+                        </tr>
+						<tr>
+                            <td>klavesnice</td>
+                            <td>Element umožňující zapnutí/vypnutí klávesnice</td>
+                            <td>Zapnuto; Vypnuto</td>
+                        </tr>
+						<tr>
+                            <td>dotykova</td>
+                            <td>Element umožňující zapnutí/vypnutí doteykové obrazovky</td>
+                            <td>Zapnuto; Vypnuto</td>
+                        </tr>
+						<tr>
+                            <td>net</td>
+                            <td>Element pro nastavení sítě</td>
+                            <td>Nenabývá žádných hodnot</td>
+                        </tr>
+						<tr>
+                            <td>sit</td>
+                            <td>Element určen pro zapnutí / vypnutí LAN</td>
+                            <td>Zapnuto; Vypnuto</td>
+                        </tr>
+						<tr>
+                            <td>wifi</td>
+                            <td>Element určen pro zapnutí / vypnutí WLAN</td>
+                            <td>0-Zapnuto; Vypnuto%</td>
+                        </tr>
+						<tr>
+                            <td>proxy</td>
+                            <td>Element určen pro použití PROXY</td>
+                            <td>Zapnuto; Vypnuto</td>
+                        </tr>
+						<tr>
+                            <td>NTP</td>
+                            <td>Element určující adresu časového serveru</td>
+                            <td>Libovolný textový řetězec</td>
+                        </tr>
+						<tr>
+                            <td>DHCP</td>
+                            <td>Element určující použití DHCP serveru</td>
+                            <td>Zapnuto; Vypnuto</td>
+                        </tr>
+						<tr>
+                            <td>IP</td>
+                            <td>Element určen pro nastavení IP adresy</td>
+                            <td>Libovolný textový řetězec</td>
+                        </tr>
+						<tr>
+                            <td>mask</td>
+                            <td>Element určen pro nastavení masky sítě</td>
+                            <td>Libovolný textový řetězec</td>
+                        </tr>
+						<tr>
+                            <td>gate</td>
+                            <td>Element určen pro nastavení masky sítě</td>
+                            <td>Libovolný textový řetězec</td>
+                        </tr>
+						<tr>
+                            <td>IPv6</td>
+                            <td>Element určující Zapnutí / Vypnutí protokolu v6</td>
+                            <td>Zapnuto; Vypnuto</td>
+                        </tr>
+						<tr>
+                            <td>DNS</td>
+                            <td>Element, který určuje, že všechny elementy uvnitř udávají DNS</td>
+                            <td>Nenabývá žádných hodnot</td>
+                        </tr>
+						<tr>
+                            <td>DNS1</td>
+                            <td>Element určující adresu DNS1</td>
+                            <td>Libovolný textový řetězec</td>
+                        </tr>
+                        <tr>
+                            <td>DNS2</td>
+                            <td>Element určující adresu DNS2</td>
+                            <td>Libovolný textový řetězec</td>
+                        </tr>
+                                                <tr>
+                            <td>DNS3</td>
+                            <td>Element určující adresu DNS3</td>
+                            <td>Libovolný textový řetězec</td>
+                        </tr>
+						<tr>
+                            <td>uzivatelsky_profil</td>
+                            <td>Element pro určení uzivatelských profilů</td>
+                            <td>Nenabývá žádných hodnot</td>
+                        </tr>
+						<tr>
+                            <td>jmeno</td>
+                            <td>Element určující jméno uživatele</td>
+                            <td>Libovolný textový řetězec</td>
+                        </tr>
+						<tr>
+                            <td>VIP</td>
+                            <td>Element určující VIP STATUS uživatele</td>
+                            <td>Zapnout; Vypnout</td>
+                        </tr>
+						<tr>
+                            <td>citlivost_mysi</td>
+                            <td>Element určující zapnutí nebo vypnutí efekt rybího oka, pro širší rozhled</td>
+                            <td>Hodnoty nabývá pomocí svých atributů</td>
+                        </tr>
+						<tr>
+                            <td>jazyk</td>
+                            <td>Element určen pro nastavení jazyka</td>
+                            <td>Hodnoty nabývá pomocí svých atributů</td>
+                        </tr>
+						<tr>
+                            <td>titulky</td>
+                            <td>Element určující zapnutí nebo vypnutí titulek</td>
+                            <td>Zapnout; Vypnout</td>
+                        </tr>
+                    </table>					
+                </section>
+				<br>
+                <section>
+                    <h2 id="popis-at">Popis atributů</h2>
+                    <p>V této části jsou vypsané a popsané jednotlivé atributy a jaké hodnoty mohou nabývat.</p>
+                    <table>
+                        <tr>
+                            <th>Atribut</th>
+                            <th>Popis</th>
+                            <th>Hodnoty</th>
+                        </tr>
+                        <tr>
+                            <td>vRozhrani</td>
+                            <td>Atribut určující nastavení citlivosti myši v rozhraní hry</td>
+                            <td>0-100%</td>
+                        </tr>
+                        <tr>
+                            <td>priPrehravani</td>
+                            <td>Atribut určující nastavení citlivosti myši ve hře</td>
+                            <td>0-100%</td>
+                        </tr>
+						<tr>
+                            <td>dialogy</td>
+                            <td>Atribut určující nastavení jazyku při dialozích</td>
+                            <td>Anglictina; Cestina; Nemcina</td>
+                        </tr>
+						<tr>
+                            <td>texty</td>
+                            <td>Atribut určující nastavení jazyku v psaných textech</td>
+                            <td>Anglictina; Cestina; Nemcina</td>
+                        </tr>
+						
+                    </table>
+                </section>
+				<br>
+                <section>
+                    <h2 id="popis-tr">Popis transformace</h2>
+                    <p>Transformace obsahuje cykly "xsl:for-each" a údaje pak zadáváme pomocí tagu "xsl:value-of". Transformace je rozdělená na část nastavení a na část nastavení jednotlivých profilů. Podmínka v transformaci způsobí, že se do transformace vypíší pouze uživatelé, kteří jsou VIP.</p>
+                </section>
+				<br>
+                <section>
+                    <h2 id="zaver">Závěr</h2>
+                    <p>Cílem tohoto projetu je vytvoření souboru XML, schématu, XSL souboru pro transformaci do JSON a poznání tohoto značkovacího jazyka.</p>
+                </section>
+            </article> 
+        </main>
+        
+        <footer>
+            <p><i>Štěpán Haizler | 2. ročník | INFO | PEF | ČZU</i></p>
+        </footer>
+    </body>
+</html>

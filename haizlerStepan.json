@@ -1,0 +1,103 @@
+
+        {
+        "Nastaveni domáciho kina - KODI":
+        {
+        "Nastaveni":
+            {
+            "Videa":
+                {
+                "Rozliseni": "1440p",
+                "Pomer stran": "16:9",
+                "Zvetseni obrazu": "1",
+                "Obnovovaci frekvence": "60",
+                "Zpozdeni obnovovaci frekvence": "0",
+                "Omezeni": "Vypnuto",
+                "3D zobrazeni": "Zapnuto"
+                },
+                
+            "Zvuku":
+                {
+                "Vystup": "HDMI2",
+                "Pocet kanalu": "7.1",
+                "Hlasitost": "80",
+                "Ztlumit": "Vypnuto",
+                "Zvuky tlacitek": "Zapnuto",
+                "Zmena zvuku": "upravene1"
+                },
+                
+            "Vstupnich zarizeni":
+                {
+                "Mys": "Zapnuto",
+                "Klavesnice": "Zapnuto",
+                "Dotykova obrazovka": "Zapnuto"
+                },
+                
+            "Site":
+                {
+                "Povolit LAN": "Zapnuto",
+                "Povolit WLAN": "Vypnuto",
+                "Povolit PROXY": "Vypnuto",
+                "Casovy server": "192.168.1.1",
+                "Povolit DHCP": "Vypnuto",
+                "IP adresa": "192.168.1.223",
+                "Maska site": "255.255.255.0",
+                "Vychozi brana": "192.168.1.0",
+                "DNS":
+                    {
+                    "8.8.8.8",
+                    "0.0.0.0",
+                    "0.0.0.0"
+                    },
+                },
+               
+            }
+        
+            "Uzivatelsky profil":
+            {
+            
+            "Jmeno": "Stepan",
+            "VIP": "Zapnuto",
+            "Jazyk":
+                    {
+                    "Dialogy": "Cestina",
+                    "Texty": "Cestina",
+                    "Titulky": "Zapnuto"
+                    },
+            ,}
+                
+            },
+            "Uzivatelsky profil":
+            {
+            
+            "Jmeno": "Terka",
+            "VIP": "Zapnuto",
+            "Jazyk":
+                    {
+                    "Dialogy": "Anglictina",
+                    "Texty": "Cestina",
+                    "Titulky": "Zapnuto"
+                    },
+            ,}
+                
+            },
+            "Uzivatelsky profil":
+            {
+            
+            "Jmeno": "Eva",
+            "VIP": "Zapnuto",
+            "Jazyk":
+                    {
+                    "Dialogy": "Anglictina",
+                    "Texty": "Cestina",
+                    "Titulky": "Vypnuto"
+                    },
+            ,}
+                
+            }
+            
+              
+        }
+        }
+        
+        
+    

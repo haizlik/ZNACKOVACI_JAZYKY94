@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+
+
+<xs:schema version="1.0"
+           xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           elementFormDefault="qualified">
+    
+    <xs:element name="config">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="configSys">
+                    <xs:complexType>
+                        <xs:sequence>
+<!--
+NASTAVENÍ VIDEA  NASTAVENÍ VIDEA  NASTAVENÍ VIDEA  NASTAVENÍ VIDEA  NASTAVENÍ VIDEA  
+-->
+                            <xs:element name="video">
+                                <xs:complexType>
+                                    <xs:sequence> 
+                                        <xs:element name="frekvence" type="frce"/>
+                                        <xs:element name="rozliseni" type="resolution"/>
+                                        <xs:element name="pomerStran">
+                                            <xs:simpleType>
+                                                <xs:restriction base="xs:string">
+                                                    <xs:enumeration value="5:4"/>
+                                                    <xs:enumeration value="4:3"/>
+                                                    <xs:enumeration value="16:9"/>
+                                                    <xs:enumeration value="16:10"/>
+                                                </xs:restriction>
+                                            </xs:simpleType>
+                                        </xs:element>
+                                        <xs:element name="priblizeni" type="zoom"/>
+                                        <xs:element name="zpozdeni">
+                                            <xs:simpleType>
+                                                <xs:restriction base="xs:integer">
+                                                    <xs:minInclusive value="0"/>
+                                                    <xs:maxInclusive value="10"/>
+                                                </xs:restriction>
+                                            </xs:simpleType>
+                                        </xs:element>
+                                        <xs:element name="omezení" type="onOff"/>
+                                        <xs:element name="_3d" type="onOff"/>
+                                    </xs:sequence>
+                                </xs:complexType>
+                            </xs:element>
+              
+<!--
+NASTAVENÍ ZVUKU NASTAVENÍ ZVUKU NASTAVENÍ ZVUKU NASTAVENÍ ZVUKU NASTAVENÍ ZVUKU 
+-->
+                            <xs:element name="audio">
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element name="vystup">
+                                            <xs:simpleType>
+                                                <xs:restriction base="xs:string">
+                                                    <xs:enumeration value="zadny"/>
+                                                    <xs:enumeration value="HDMI1"/>
+                                                    <xs:enumeration value="HDMI2"/>
+                                                    <xs:enumeration value="HDMI3"/>
+                                                    <xs:enumeration value="Bluetooth"/>
+                                                </xs:restriction>
+                                            </xs:simpleType>
+                                        </xs:element>
+                                        <xs:element name="kanaly">
+                                            <xs:simpleType>
+                                                <xs:restriction base="xs:string">
+                                                    <xs:enumeration value="2.0"/>
+                                                    <xs:enumeration value="3.0"/>
+                                                    <xs:enumeration value="5.1"/>
+                                                    <xs:enumeration value="6.1"/>
+                                                    <xs:enumeration value="7.1"/>
+                                                </xs:restriction>
+                                            </xs:simpleType>
+                                        </xs:element>
+                                        <xs:element name="volume" type="procenta"/>
+                                        <xs:element name="mute" type="onOff"/>
+                                        <xs:element name="GUI" type="onOff"/>
+                                        <xs:element name="zvuky">
+                    
+                                            <xs:simpleType>
+                                                <xs:restriction base="xs:string">
+                                                    <xs:enumeration value="zakladni"/>
+                                                    <xs:enumeration value="upravene1"/>
+                                                    <xs:enumeration value="upravene2"/>
+                                                    <xs:enumeration value="upravene3"/>
+                                                    <xs:enumeration value="worms"/>
+                                                </xs:restriction>
+                                            </xs:simpleType>
+                                        </xs:element>
+                                    </xs:sequence>
+                                </xs:complexType>
+                            </xs:element>
+<!--
+NASTAVENÍ VSTUPU NASTAVENÍ VSTUPU NASTAVENÍ VSTUPU NASTAVENÍ VSTUPU NASTAVENÍ VSTUPU
+-->              
+                            <xs:element name="input">
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element name="mys" type="onOff"/>
+                                        <xs:element name="klavesnice" type="onOff"/>
+                                        <xs:element name="dotykova" type="onOff"/>
+                                    </xs:sequence>
+                                </xs:complexType>
+                            </xs:element>
+<!--
+NASTAVENÍ INTERNETU NASTAVENÍ INTERNETU NASTAVENÍ INTERNETU NASTAVENÍ INTERNETU
+-->
+                            <xs:element name="net">
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element name="sit" type="onOff"/>
+                                        <xs:element name="wifi" type="onOff"/>  
+                                        <xs:element name="proxy" type="onOff"/>
+                                        <xs:element name="NTP" type="xs:string"/>
+                                        <xs:element name="DHCP" type="onOff"/>
+                                        <xs:element name="IP" type="xs:string"/>
+                                        <xs:element name="mask" type="xs:string"/>
+                                        <xs:element name="gate" type="xs:string"/>
+                                        <xs:element name="IPv6" type="onOff"/>
+                                        <xs:element name="DNS">
+                                            <xs:complexType>
+                                                <xs:sequence>
+                                                    <xs:element name="DNS1" type="xs:string"/>
+                                                    <xs:element name="DNS2" type="xs:string"/>
+                                                    <xs:element name="DNS3" type="xs:string"/>
+                                                </xs:sequence>
+                                            </xs:complexType>
+                                        </xs:element>
+                                    </xs:sequence>
+                                </xs:complexType>
+                            </xs:element>
+
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+        
+                <xs:element name="uzivatelsky_profil" type="profil" maxOccurs="unbounded"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+  
+    <xs:complexType name="profil">
+        <xs:sequence>
+            <xs:element name="jmeno" type="xs:string"/>
+            <xs:element name="VIP" type="onOff"/>
+            <xs:element name="citlivost_mysi">
+                <xs:complexType>
+                    <xs:simpleContent>
+                        <xs:extension base="xs:string">
+                            <xs:attribute name="vRozhrani" type="procenta"/>
+                            <xs:attribute name="priPrehravani" type="procenta"/>
+                        </xs:extension>
+                    </xs:simpleContent>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="jazyk">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element name="titulky" type="onOff"/>
+                    </xs:sequence>
+                    <xs:attribute name="dialogy" type="lang"/>
+                    <xs:attribute name="texty" type="lang"/>
+                </xs:complexType>
+            </xs:element>
+        </xs:sequence>
+    </xs:complexType>
+  
+    <xs:simpleType name="onOff">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="Zapnuto"/>
+            <xs:enumeration value="Vypnuto"/>
+        </xs:restriction>
+    </xs:simpleType>
+  
+    <xs:simpleType name="zoom">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="1"/
+            <xs:enumeration value="2"/>
+            <xs:enumeration value="4"/>
+            <xs:enumeration value="8"/>
+        </xs:restriction>
+    </xs:simpleType>
+  
+    <xs:simpleType name="procenta">
+        <xs:restriction base="xs:integer">
+            <xs:minInclusive value="0"/>
+            <xs:maxInclusive value="100"/>
+        </xs:restriction>
+    </xs:simpleType>
+  
+    <xs:simpleType name="frce">
+        <xs:restriction base="xs:integer">
+            <xs:minInclusive value="25"/>
+            <xs:maxInclusive value="60"/>
+        </xs:restriction>
+    </xs:simpleType>
+  
+    <xs:simpleType name="resolution">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="144p"/>
+            <xs:enumeration value="240p"/>
+            <xs:enumeration value="480p"/>
+            <xs:enumeration value="720p"/>
+            <xs:enumeration value="1080p"/>
+            <xs:enumeration value="1440p"/>
+            <xs:enumeration value="2160p"/>
+            <xs:enumeration value="4320p"/>
+        </xs:restriction>
+    </xs:simpleType>
+  
+    <xs:simpleType name="lang">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="Anglictina"/>
+            <xs:enumeration value="Cestina"/>
+            <xs:enumeration value="Nemcina"/>
+        </xs:restriction>
+    </xs:simpleType>
+</xs:schema>

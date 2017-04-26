@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="haizlerStepan.xsl"?>
+
+
+
+
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="haizlerStepan.xsd">
+    <configSys>
+        <video>
+            <frekvence>60</frekvence>
+            <rozliseni>1440p</rozliseni>
+            <pomerStran>16:9</pomerStran>
+            <priblizeni>1</priblizeni>
+            <zpozdeni>0</zpozdeni>
+            <omezení>Vypnuto</omezení>
+            <_3d>Zapnuto</_3d>
+        </video>
+        <audio>
+            <vystup>HDMI2</vystup>
+            <kanaly>7.1</kanaly>
+            <volume>80</volume>
+            <mute>Vypnuto</mute>
+            <GUI>Zapnuto</GUI>
+            <zvuky>upravene1</zvuky>
+        </audio>
+        <input>
+            <mys>Zapnuto</mys>
+            <klavesnice>Zapnuto</klavesnice>
+            <dotykova>Zapnuto</dotykova>
+        </input>
+        <net>
+            <sit>Zapnuto</sit>
+            <wifi>Vypnuto</wifi>
+            <proxy>Vypnuto</proxy>
+            <NTP>192.168.1.1</NTP>
+            <DHCP>Vypnuto</DHCP>
+            <IP>192.168.1.223</IP>
+            <mask>255.255.255.0</mask>
+            <gate>192.168.1.0</gate>
+            <IPv6>Vypnuto</IPv6>
+            <DNS>
+                <DNS1>8.8.8.8</DNS1>
+                <DNS2>0.0.0.0</DNS2>
+                <DNS3>0.0.0.0</DNS3>
+            </DNS>
+        </net>
+    </configSys>
+    <uzivatelsky_profil>
+        <jmeno>Stepan</jmeno>
+        <VIP>Zapnuto</VIP>
+        <citlivost_mysi vRozhrani="5" priPrehravani="3"/>
+        <jazyk dialogy="Cestina" texty="Cestina">
+            <titulky>Zapnuto</titulky>
+        </jazyk>
+    </uzivatelsky_profil>
+    
+    <uzivatelsky_profil>
+        <jmeno>Terka</jmeno>
+        <VIP>Zapnuto</VIP>
+        <citlivost_mysi vRozhrani="1" priPrehravani="5"/>
+        <jazyk dialogy="Anglictina" texty="Cestina">
+            <titulky>Zapnuto</titulky>
+        </jazyk>
+    </uzivatelsky_profil>
+    
+    <uzivatelsky_profil>
+        <jmeno>Eva</jmeno>
+        <VIP>Zapnuto</VIP>
+        <citlivost_mysi vRozhrani="1" priPrehravani="5"/>
+        <jazyk dialogy="Anglictina" texty="Cestina">
+            <titulky>Vypnuto</titulky>
+        </jazyk>
+    </uzivatelsky_profil>
+    
+    <uzivatelsky_profil>
+        <jmeno>Simon</jmeno>
+        <VIP>Vypnuto</VIP>
+        <citlivost_mysi vRozhrani="1" priPrehravani="5"/>
+        <jazyk dialogy="Anglictina" texty="Nemcina">
+            <titulky>Zapnuto</titulky>
+        </jazyk>
+    </uzivatelsky_profil>
+</config>
